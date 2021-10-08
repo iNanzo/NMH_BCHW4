@@ -109,7 +109,7 @@ function submitScore(){
     if(score <= 0){    
         subText.textContent = "Scores of 0 cannot be saved. Play Again?";
         scoreText.textContent = "Score: N/A";
-    }if(initials.value == ""){
+    }if(savedInit == ""){
         savedInit = "Anonymous";
         subText.textContent = "Score Saved. Play Again?";
         scoreText.textContent = savedInit + " - " + score;
@@ -156,10 +156,17 @@ function renderScores(){
     resultText.appendChild(button)
 
     var clearScore = document.querySelector("#clear-score");
-    clearScore.addEventListener("click", localStorage.clear());
+    clearScore.addEventListener("click", clearScores);
 }
 
-// store localStorage submitScore values into highScore localStorage variable as an array of objects
+// Clear local storage and empty current scoreboard
+
+function clearScores(){
+    subText.innerHTML = "";
+    localStorage.clear()
+}
+
+// Store localStorage submitScore values into highScore localStorage variable as an array of objects
 function saveScore(userName, userScore) {
     var hiScore = {
         name: userName,
