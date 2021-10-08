@@ -9,7 +9,8 @@ var scoreText = document.querySelector("#score-text");
 var inputField = document.querySelector("#input-field");
 var againEl = document.querySelector("#play-again");
 
-var score;
+var savedInit = "";
+var score = "";
 
 var timer;
 var timerCount;
@@ -17,8 +18,6 @@ var timerRunning = false;
 
 var questions = [];
 var currentAnswer = "";
-
-permissions-policy: interest-cohort=();
 
 var hiScores = JSON.parse(localStorage.getItem("highScore") || "[]");
 
@@ -104,7 +103,7 @@ function endGame(){
 
 // Use information from text field and score and execute the saveScore function depending on values
 function submitScore(){
-    var savedInit = initials.value;
+    savedInit = initials.value;
     console.log(savedInit);
     console.log(initials.value);
 
