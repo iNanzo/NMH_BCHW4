@@ -98,16 +98,15 @@ function endGame(){
 
     submitButton = document.querySelector("#submit");
     submitButton.addEventListener("click", submitScore);
-    
-    console.log(initials.value);
 }
 
 
 // Use information from text field and score and execute the saveScore function depending on values
 function submitScore(){
+    var initials = document.querySelector("#initials");
+
     savedInit = initials.value;
     console.log(savedInit);
-    console.log(initials.value);
 
     inputField.innerHTML = "";
 
