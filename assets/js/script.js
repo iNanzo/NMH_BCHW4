@@ -9,7 +9,6 @@ var scoreText = document.querySelector("#score-text");
 var inputField = document.querySelector("#input-field");
 var againEl = document.querySelector("#play-again");
 
-var savedInit = "";
 var score = "";
 
 var timer;
@@ -103,25 +102,22 @@ function endGame(){
 
 // Use information from text field and score and execute the saveScore function depending on values
 function submitScore(){
-    var initials = document.querySelector("#initials");
+    var initials = document.querySelector("#initials").value;
 
-    savedInit = initials.value;
-    console.log(savedInit);
-
-    inputField.innerHTML = "";
+    console.log(initials);
 
     if(score <= 0){    
         subText.textContent = "Scores of 0 cannot be saved. Play Again?";
         scoreText.textContent = "Score: N/A";
-    }if(savedInit == ""){
-        savedInit = "Anonymous";
+    }if(initials == ""){
+        initials = "Anonymous";
         subText.textContent = "Score Saved. Play Again?";
-        scoreText.textContent = savedInit + " - " + score;
-        saveScore(savedInit, score);
+        scoreText.textContent = initials + " - " + score;
+        saveScore(initials, score);
     }else{
         subText.textContent = "Score Saved. Play Again?";
-        scoreText.textContent = savedInit + " - " + score;
-        saveScore(savedInit, score);
+        scoreText.textContent = initials + " - " + score;
+        saveScore(initials, score);
     }
 
 }
@@ -172,6 +168,8 @@ function clearScores(){
 
 // Store localStorage submitScore values into highScore localStorage variable as an array of objects
 function saveScore(userName, userScore) {
+    inputField.innerHTML = "";
+
     var hiScore = {
         name: userName,
         num: userScore
