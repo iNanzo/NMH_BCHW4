@@ -1,0 +1,108 @@
+/* Basics */
+:root {
+    --dark: rgb(55, 58, 80);
+    --light: lightgray;
+}
+body {
+    background-color: var(--dark);
+    color: wheat;
+}
+/* Main Quiz Body */
+
+.start-text h1 {
+    margin-top: 8%;
+    font-size: 150%;
+}
+.start-text {
+    text-align: center;
+    font-family: Arial;
+}
+
+#underline {
+    margin-top: 1%;
+    border-style: solid;
+    border-width: 1px;
+    border-top: 1px;
+    border-color: var(--light);
+    width: 70%;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#result-text, #score-text {
+    margin-top: 1%;
+    color: var(--light);
+    font-family: Arial;
+}
+
+/* Buttons */
+button {
+    color: var(--dark);
+}
+
+.choice-btns button {
+    cursor: pointer;
+    width: 10%;
+    padding: 5px;
+    display: block;
+    margin-bottom: 3px;
+    margin-left: 43.5%; 
+    margin-right: auto;
+}
+
+.start-button, #play-again {
+    margin-top: 10px;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 80%;
+    cursor: pointer;
+}
+
+.highscore {    
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #FE5F55;
+    font-size: 95%;
+}
+
+.choice-list ul, li {
+    list-style-type: none;
+    text-align: center;
+}
+
+/* Highscore */
+
+.highscore {
+    font-family: Arial;
+    text-align: end;
+}
+
+/* Timer */
+
+.timer, .time-text {
+    font-family: Arial;
+    font-size: x-large;
+    position: absolute;
+    text-align: center;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    width: 100px;
+}
+
+.time-text {
+    bottom: 50px;
+}
+
+.timer {
+    bottom: 20px;
+}
+
+/* Other */
