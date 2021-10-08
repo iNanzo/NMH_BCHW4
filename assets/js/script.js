@@ -18,6 +18,8 @@ var timerRunning = false;
 var questions = [];
 var currentAnswer = "";
 
+permissions-policy: interest-cohort=();
+
 var hiScores = JSON.parse(localStorage.getItem("highScore") || "[]");
 
 console.log(hiScores);
