@@ -103,6 +103,8 @@ function endGame(){
 // Use information from text field and score and execute the saveScore function depending on values
 function submitScore(){
     var savedInit = initials.value;
+    console.log(savedInit);
+    console.log(initials.value);
 
     inputField.innerHTML = "";
 
