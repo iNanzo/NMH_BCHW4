@@ -98,6 +98,8 @@ function endGame(){
 
     submitButton = document.querySelector("#submit");
     submitButton.addEventListener("click", submitScore);
+    
+    console.log(initials.value);
 }
 
 
